@@ -59,17 +59,24 @@ function TodoFrom({
             <p>Choose A Project</p>
           </div>
           <div className="Projects">
-            {projects.map((project) => (
-              <div
-                className={`Project ${
-                  todoProject === project.name ? "Active" : ""
-                }`}
-                key={project.id}
-                onClick={() => setTodoProject(project.name)}
-              >
-                {project.name}
+            {projects.length > 0 ? (
+              projects.map((project) => (
+                <div
+                  className={`Project  ${
+                    todoProject === project.name ? "Active" : ""
+                  }`}
+                  key={project.id}
+                  onClick={() => setTodoProject(project.name)}
+                >
+                  {project.name}
+                </div>
+              ))
+            ) : (
+              <div style={{ color: "#ff0000" }}>
+                {" "}
+                Please Add A Project before Proceeding{" "}
               </div>
-            ))}
+            )}
           </div>
         </div>
         {showButtons && (

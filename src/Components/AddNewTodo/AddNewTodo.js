@@ -23,7 +23,7 @@ function AddNewTodo() {
 
   useEffect(() => {
     setTodoProject(selectedProject);
-  });
+  }, [selectedProject]);
 
   return (
     <div className="AddNewTodo">
