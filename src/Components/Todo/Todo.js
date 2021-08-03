@@ -33,7 +33,7 @@ function Todo({ todo }) {
           </p>
           <span>
             {" "}
-            {todo.time} - {todo.project}{" "}
+            {todo.time} - {todo.projectName}{" "}
           </span>
           <div className={`line ${todo.checked ? "lineThrough" : ""}`}></div>
         </div>
